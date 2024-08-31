@@ -62,10 +62,9 @@ function PodcastDetailsPage() {
     };
   }, [id]);
 
-  console.log(podcast.displayImage)
+  console.log(podcast.displayImage);
 
   return (
-
     <div>
       <Header />
       <div className="input-wrapper" style={{ marginTop: "0rem" }}>
@@ -81,15 +80,15 @@ function PodcastDetailsPage() {
               }}
             >
               <h1 className="Podcast-title-heading">{podcast.title}</h1>
-              {podcast.createdBy == auth.currentUser.uid && (
+              {/* {podcast.createdBy == auth.currentUser.uid && ( */}
                 <Button
                   style={{ width: "200px", margin: 0 }}
-                  text={"Create Episode"}
+                  text="Create Episode"
                   onClick={() => {
                     navigate(`/podcast/${id}/create-episode`);
                   }}
                 />
-              )}
+              {/* )} */}
             </div>
 
             <div className="banner-wrapper">
